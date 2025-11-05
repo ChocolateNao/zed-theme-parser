@@ -1,11 +1,11 @@
 {
-  "name": "zed-theme-italicizer",
+  "name": "zed-theme-parser",
   "version": "0.1.0",
-  "description": "A tool to italicize Zed editor themes",
+  "description": "A tool to to parse, validate and italicize Zed editor themes",
   "main": "./src/index.js",
   "type": "module",
   "bin": {
-    "zed-theme-italizer": "./dist/cli.js"
+    "zed-theme-parser": "./dist/cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
     "dev": "tsc --watch",
     "cli": "node dist/cli.js",
     "pack": "npm pack",
-    "publish:local": "npm run build && npm pack"
+    "publish:local": "npm run build && npm run build:types && npm pack"
   },
   "keywords": [
     "zed",
