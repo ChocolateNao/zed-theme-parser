@@ -1,0 +1,35 @@
+{
+  "name": "zed-theme-italicizer",
+  "version": "0.1.0",
+  "description": "A tool to italicize Zed editor themes",
+  "main": "./src/index.js",
+  "type": "module",
+  "bin": {
+    "zed-theme-italizer": "./dist/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./esbuild.config.mjs",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist/types",
+    "prepublishOnly": "npm run build && npm run build:types",
+    "dev": "tsc --watch",
+    "cli": "node dist/cli.js",
+    "pack": "npm pack",
+    "publish:local": "npm run build && npm pack"
+  },
+  "keywords": [
+    "zed",
+    "theme",
+    "editor",
+    "italic"
+  ],
+  "author": "Andrey Loginov <andrey12q112@gmail.com> (https://choconao.me)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.19.0",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "commander": "^14.0.2",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.9.3"
+  }
+}

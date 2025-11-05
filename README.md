@@ -1,2 +1,3 @@
-# zed-theme-italicizer
-A Tool to Italicize Zed Editor Themes
+# Zed Theme Italicizer [WIP]
+
+A work-in-progress tool to italicize Zed editor themes.
