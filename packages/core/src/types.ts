@@ -1,16 +1,16 @@
 type Nullable<T> = T | undefined | null;
 
 export interface ZedTheme {
-  $schema: string,
+  $schema: string;
   name: string;
   author: string;
   themes: Theme[];
 }
 
 export interface Theme {
-    name: string;
-    appearance:  "light" | "dark";
-    style: ThemeStyle;
+  name: string;
+  appearance: 'light' | 'dark';
+  style: ThemeStyle;
 }
 
 export interface ThemeStyle {
@@ -20,22 +20,24 @@ export interface ThemeStyle {
   [key: string]: unknown;
 }
 
-export interface PlayerStyle {
-  [key: string]: {
+export type PlayerStyle = Record<
+  string,
+  {
     cursor?: Nullable<string>;
     background?: Nullable<string>;
     selection?: Nullable<string>;
-  };
-}
+  }
+>;
 
-export interface SyntaxStyle {
-  [key: string]: {
+export type SyntaxStyle = Record<
+  string,
+  {
     background_color?: Nullable<string>;
     color?: Nullable<string>;
-    font_style?: Nullable<"normal" | "italic" | "oblique">;
+    font_style?: Nullable<'normal' | 'italic' | 'oblique'>;
     font_weight?: Nullable<number>;
-  };
-}
+  }
+>;
 
 export interface ItalicizeConfig {
   /** Whether to preserve existing font styles */
