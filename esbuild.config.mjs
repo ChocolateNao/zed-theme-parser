@@ -1,5 +1,4 @@
 import * as esbuild from 'esbuild';
-import { nodeExternalsPlugin } from 'esbuild-node-externals';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { cwd, versions } from 'node:process';
