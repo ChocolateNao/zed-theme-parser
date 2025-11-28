@@ -23,6 +23,8 @@
     "validate": "pnpm typecheck && pnpm lint:check && pnpm format:check"
   },
   "devDependencies": {
-    "ajv": "^8.17.1"
+    "@types/deep-diff": "^1.0.5",
+    "ajv": "^8.17.1",
+    "deep-diff": "^1.0.2"
   }
 }

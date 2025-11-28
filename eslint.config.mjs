@@ -9,19 +9,12 @@ import love from 'eslint-config-love';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
+  love,
   {
-    languageOptions: {
-      parserOptions: {
-        projectService: {
-          defaultProject: true,
-        },
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
     ignores: ['dist/**/*', '*.mjs', 'node_modules', 'build/**/*', 'coverage/**/*', '*.d.ts'],
     plugins: {
       'eslint-comments': eslintComments,
-      import: pluginImport,
+      'import': pluginImport,
       'unused-imports': unusedImports,
     },
     rules: {
@@ -36,6 +29,15 @@ export default defineConfig([
       '@typescript-eslint/no-unsafe-call': 'error',
       '@typescript-eslint/no-unsafe-member-access': 'error',
       '@typescript-eslint/no-unsafe-return': 'error',
+      '@typescript-eslint/no-magic-numbers': [
+        'warn',
+        {
+          ignore: [-1, 0, 1, 2],
+          ignoreArrayIndexes: true,
+          ignoreDefaultValues: true,
+          ignoreEnums: true
+        },
+      ],
       '@typescript-eslint/consistent-type-imports': [
         'error',
         {
@@ -99,7 +101,7 @@ export default defineConfig([
         },
       },
     },
-    ...love,
+    // ...love,
   },
   tseslint.configs.strictTypeChecked,
   tseslint.configs.stylisticTypeChecked,
