@@ -1,10 +1,10 @@
 {
-  "name": "zed-theme-parser",
+  "name": "@zed-theme-utils/cli",
   "version": "0.1.0",
   "type": "module",
   "bin": {
-    "zed-theme-parser": "./dist/index.js",
-    "ztp": "./dist/index.js"
+    "zed-theme-utils": "./dist/index.js",
+    "ztu": "./dist/index.js"
   },
   "scripts": {
     "build": "rimraf ./dist && node ./esbuild.config.mjs",
@@ -19,7 +19,7 @@
     "validate": "pnpm typecheck && pnpm lint:check && pnpm format:check"
   },
   "devDependencies": {
-    "@zed-theme-parser/core": "workspace:*",
+    "@zed-theme-utils/core": "workspace:*",
     "chalk": "^5.6.2",
     "commander": "^14.0.2",
     "ora": "^9.0.0"

@@ -1,5 +1,5 @@
 {
-  "name": "@zed-theme-parser/core",
+  "name": "@zed-theme-utils/core",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",

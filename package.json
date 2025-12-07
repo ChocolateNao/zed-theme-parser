@@ -1,13 +1,9 @@
 {
-  "name": "zed-theme-parser-workspace",
+  "name": "zed-theme-utils-workspace",
   "private": true,
   "version": "0.1.0",
   "description": "A tool to to parse, validate and italicize Zed editor themes",
-  "main": "./src/index.js",
   "type": "module",
-  "bin": {
-    "zed-theme-parser": "./dist/cli.js"
-  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
