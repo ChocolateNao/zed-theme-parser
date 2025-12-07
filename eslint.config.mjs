@@ -10,6 +10,9 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default defineConfig([
   love,
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
+  eslintPluginPrettierRecommended,
   {
     ignores: ['dist/**/*', '*.mjs', 'node_modules', 'build/**/*', 'coverage/**/*', '*.d.ts'],
     plugins: {
@@ -27,6 +30,7 @@ export default defineConfig([
       '@typescript-eslint/no-inferrable-types': 'error',
       '@typescript-eslint/no-unsafe-assignment': 'error',
       '@typescript-eslint/no-unsafe-call': 'error',
+      '@typescript-eslint/no-unnecessary-type-parameters': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'error',
       '@typescript-eslint/no-unsafe-return': 'error',
       '@typescript-eslint/no-magic-numbers': [
@@ -69,7 +73,7 @@ export default defineConfig([
       'import/no-unresolved': 'error',
       'import/no-cycle': 'error',
       'import/no-default-export': 'error',
-
+      'import/group-exports': 'error',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': [
         'warn',
@@ -80,7 +84,6 @@ export default defineConfig([
           argsIgnorePattern: '^_',
         },
       ],
-
       'no-console': 'warn',
       'no-debugger': 'error',
       'no-duplicate-imports': 'error',
@@ -101,9 +104,5 @@ export default defineConfig([
         },
       },
     },
-    // ...love,
   },
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  eslintPluginPrettierRecommended,
 ]);
