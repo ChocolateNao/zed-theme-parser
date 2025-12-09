@@ -26,7 +26,7 @@
   ],
   "author": "Andrey Loginov <andrey12q112@gmail.com> (https://choconao.me)",
   "license": "MIT",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.25.0",
   "devDependencies": {
     "@types/node": "^24.10.0",
     "@typescript-eslint/parser": "^8.46.3",
