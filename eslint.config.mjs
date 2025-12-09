@@ -92,6 +92,7 @@ export default defineConfig([
       'prefer-template': 'error',
       'object-shorthand': 'error',
       'no-useless-rename': 'error',
+      'logical-assignment-operators': 'off',
     },
     settings: {
       'import/resolver': {

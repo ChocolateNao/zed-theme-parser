@@ -1,0 +1,1 @@
+export { ZedThemeUtilsAPI } from './api';

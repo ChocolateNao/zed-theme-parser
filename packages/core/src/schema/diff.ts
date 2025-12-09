@@ -20,7 +20,6 @@ const CHANGE_KIND = {
   MODIFIED: 'E',
 } as const;
 
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters -- generics preserve caller's inferred input types and improve type clarity
 function generateDiff<T, U>(lhs: T, rhs: U): DiffResult {
   const diffs = diff(lhs, rhs);
 
@@ -57,7 +56,7 @@ function generateDiff<T, U>(lhs: T, rhs: U): DiffResult {
   return result;
 }
 
-function printDiff(diffResult: DiffResult): string {
+function beautifyDiff(diffResult: DiffResult): string {
   const lines: string[] = [];
 
   if (diffResult.added.length > 0) {
@@ -90,4 +89,4 @@ function themeDiff(oldTheme: ZedTheme, newTheme: ZedTheme): DiffResult {
   return generateDiff(oldTheme, newTheme);
 }
 
-export { themeDiff, generateDiff, printDiff, type DiffResult };
+export { themeDiff, generateDiff, beautifyDiff, type DiffResult };

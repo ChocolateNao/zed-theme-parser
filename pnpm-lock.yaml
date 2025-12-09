@@ -62,7 +62,7 @@ importers:
 
   packages/cli:
     devDependencies:
-      '@zed-theme-parser/core':
+      '@zed-theme-utils/core':
         specifier: workspace:*
         version: link:../core
       chalk:
